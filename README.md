@@ -1,4 +1,4 @@
-# Aligna investor website
+# Aligna website
 
 A zero-dependency static landing page for presenting Aligna to investors, sponsors, accelerators and partners.
 
