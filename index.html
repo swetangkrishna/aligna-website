@@ -1,209 +1,261 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Aligna is an AI-native fitness intelligence platform connecting training, body progress, recovery, nutrition and wearable signals." />
-  <meta name="theme-color" content="#05070b" />
-  <title>Aligna — Personal fitness intelligence</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Aligna is an AI-native fitness intelligence platform connecting training, recovery, nutrition, body progress and wearable signals.">
+  <meta name="theme-color" content="#05060a">
+  <title>Aligna — Adaptive fitness intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="ambient ambient-a"></div>
-  <div class="ambient ambient-b"></div>
+  <div class="scene" aria-hidden="true">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="aurora aurora-c"></div>
+    <div class="grid-haze"></div>
+    <div class="cursor-light" id="cursorLight"></div>
+  </div>
 
-  <header class="site-header glass">
-    <a class="brand" href="#top" aria-label="Aligna home"><span class="brand-mark">A</span><span>aligna</span></a>
-    <nav class="desktop-nav" aria-label="Primary navigation">
+  <header class="liquid-nav glass-shell">
+    <a class="brand" href="#top"><span class="logo">A</span><span>aligna</span></a>
+    <nav>
       <a href="#product">Product</a>
       <a href="#signal">Wearables</a>
-      <a href="#status">Build status</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#fundraise">Invest</a>
+      <a href="#build">Build</a>
+      <a href="#vision">Vision</a>
     </nav>
-    <a class="header-cta tactile" href="#contact">Talk to us <span>↗</span></a>
+    <a class="nav-cta magnetic" href="#contact">Partner with us <span>↗</span></a>
   </header>
 
   <main id="top">
-    <section class="hero section-shell">
+    <section class="hero shell">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse-dot"></span> AI-native personal fitness</div>
-        <h1>Fitness that<br><span>adapts to you.</span></h1>
-        <p class="hero-lede">Aligna connects training, body progress, recovery, nutrition and wearable signals into one evolving model of the individual.</p>
+        <div class="kicker"><span></span> AI-NATIVE PERSONAL FITNESS</div>
+        <h1>Fitness that<br><em>adapts to you.</em></h1>
+        <p class="hero-lede">One adaptive system connecting training, body progress, recovery, nutrition and wearable signals — so the experience evolves with the individual.</p>
         <div class="hero-actions">
-          <a class="button button-primary tactile" href="#product">See the product <span>↗</span></a>
-          <a class="button button-ghost glass" href="#fundraise">Investor view</a>
+          <a class="btn btn-primary magnetic" href="#product">Explore Aligna <span>↗</span></a>
+          <a class="btn btn-glass magnetic" href="#contact">Investor conversation</a>
         </div>
-        <div class="hero-proof glass">
-          <div><strong>ANDROID</strong><span>Working product build</span></div>
-          <div><strong>WEAR OS</strong><span>Galaxy Watch integration underway</span></div>
-          <div><strong>AI + DATA</strong><span>One adaptive intelligence layer</span></div>
+        <div class="proof-row">
+          <div><b>ANDROID</b><span>working build</span></div>
+          <div><b>WEAR OS</b><span>integration testing</span></div>
+          <div><b>AI + DATA</b><span>adaptive layer</span></div>
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1" aria-label="Aligna phone and watch concept">
-        <div class="signal-halo"></div>
-        <div class="watch-shell">
-          <div class="watch-face">
-            <small>LIVE</small>
-            <strong><span class="heart">♥</span> <b id="heroBpm">78</b></strong>
-            <span>BPM</span>
-            <div class="watch-wave"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hero-stage reveal delay">
+        <div class="halo-ring"></div>
+        <div class="watch-device">
+          <div class="watch-glass">
+            <small>LIVE SIGNAL</small>
+            <strong><i>♥</i><span id="heroBpm">78</span></strong>
+            <em>BPM</em>
+            <div class="pulse-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
           </div>
         </div>
-        <div class="data-stream" aria-hidden="true"><span class="particle p1"></span><span class="particle p2"></span><span class="particle p3"></span></div>
-        <div class="phone phone-main">
-          <div class="phone-top"></div>
-          <div class="screen home-screen">
-            <div class="app-top"><span class="tiny-logo">A</span><span>aligna</span><span class="avatar">SK</span></div>
-            <p class="hello">TODAY / ADAPTIVE PLAN</p>
-            <h3>Ready when<br>you are.</h3>
-            <div class="readiness-card glass-inset">
-              <div><small>READINESS</small><strong>82</strong><span>/ 100</span></div>
-              <div class="ring"><b>82%</b></div>
+
+        <div class="phone-device">
+          <div class="phone-glass">
+            <div class="phone-head"><span class="mini-logo">A</span><b>aligna</b><i>SK</i></div>
+            <small class="screen-label">TODAY / ADAPTIVE PLAN</small>
+            <h3 id="modeTitle">Ready when<br>you are.</h3>
+            <div class="readiness">
+              <div><small>READINESS</small><strong id="modeScore">82</strong><span>/100</span></div>
+              <div class="meter"><b id="meterText">82%</b></div>
             </div>
-            <div class="ai-card">
-              <div class="ai-icon">✦</div>
-              <div><small>ALIGNA AI</small><strong>Push volume adjusted −8%</strong><p>Chest recovery is still in progress after your last session.</p></div>
+            <div class="insight-card">
+              <span>✦</span>
+              <div><small>ALIGNA AI</small><strong id="modeInsight">Push volume adjusted −8%</strong><p id="modeReason">Chest recovery is still in progress.</p></div>
             </div>
-            <div class="mini-row"><span>Recovery</span><b>31h remaining</b></div>
-            <div class="mini-row"><span>Workout</span><b>Push + Core · 44 min</b></div>
+            <div class="phone-row"><span>Recovery</span><b>31h remaining</b></div>
+            <div class="phone-row"><span>Workout</span><b>Push + Core · 44 min</b></div>
           </div>
         </div>
-        <div class="floating-chip chip-one glass"><span>●</span> Watch connected</div>
-        <div class="floating-chip chip-two glass"><span>✦</span> Adaptive intelligence</div>
-      </div>
-    </section>
 
-    <section class="ticker">
-      <div class="ticker-track"><span>PERSONALISED TRAINING</span><i>✦</i><span>BODY INTELLIGENCE</span><i>✦</i><span>RECOVERY</span><i>✦</i><span>WEARABLE SIGNALS</span><i>✦</i><span>NUTRITION</span><i>✦</i><span>PRIVATE AI</span><i>✦</i><span>PERSONALISED TRAINING</span><i>✦</i><span>BODY INTELLIGENCE</span></div>
-    </section>
+        <div class="stream-line"><i></i><i></i><i></i></div>
+        <div class="hero-chip chip-a glass-shell">● Watch connected</div>
+        <div class="hero-chip chip-b glass-shell">✦ Context updated</div>
 
-    <section class="problem section-shell" id="why">
-      <div class="section-label reveal">01 / THE OPPORTUNITY</div>
-      <div class="problem-grid">
-        <h2 class="reveal">Fitness apps track activity.<br><span>Aligna builds context.</span></h2>
-        <div class="problem-copy reveal delay-1">
-          <p>Workout history, food, recovery, progress and wearable data usually live in separate silos. The result is tracking without a coherent model of the person.</p>
-          <p>Aligna is being built as a continuously adapting fitness intelligence layer that connects those signals and turns them into useful next actions.</p>
-        </div>
-      </div>
-      <div class="comparison-grid reveal">
-        <article class="glass"><div class="compare-no">01</div><h3>Generic plans</h3><p>Static programs ask the user to adapt to the plan.</p><span class="arrow">→</span><strong>Aligna adapts the plan.</strong></article>
-        <article class="glass"><div class="compare-no">02</div><h3>Fragmented data</h3><p>Training, food, body and wearables sit in different places.</p><span class="arrow">→</span><strong>Aligna connects the signals.</strong></article>
-        <article class="glass"><div class="compare-no">03</div><h3>Metrics without action</h3><p>Dashboards explain what happened, not what to do next.</p><span class="arrow">→</span><strong>Aligna turns context into decisions.</strong></article>
-      </div>
-    </section>
-
-    <section class="product section-shell" id="product">
-      <div class="section-label reveal">02 / THE PRODUCT</div>
-      <div class="product-heading reveal">
-        <h2>One system. A continuously evolving<br><span>picture of your fitness.</span></h2>
-        <p>Built as an Android-first product, Aligna combines adaptive workouts, body progress, recovery, nutrition and AI assistance in one interface.</p>
-      </div>
-
-      <div class="bento-grid">
-        <article class="bento bento-wide glass reveal">
-          <div class="feature-copy"><span class="feature-index">01 / ADAPTIVE TRAINING</span><h3>Personalised workouts that can change with you.</h3><p>Plans can respond to goals, available equipment, recent training, schedule and progress.</p></div>
-          <div class="planner-ui">
-            <div class="ui-top"><span>ALIGN A / PLAN</span><span>LIVE</span></div>
-            <div class="day active"><span>MON</span><strong>Push + Core</strong><em>44 min</em></div>
-            <div class="day"><span>TUE</span><strong>Lower Body</strong><em>52 min</em></div>
-            <div class="day"><span>WED</span><strong>Recovery</strong><em>20 min</em></div>
-            <div class="adapt-note"><i>✦</i><div><small>AI ADJUSTMENT</small><p>Pressing volume reduced based on recovery state.</p></div></div>
-          </div>
-        </article>
-
-        <article class="bento glass reveal delay-1">
-          <div class="feature-copy"><span class="feature-index">02 / PROGRESS</span><h3>See what is changing.</h3><p>Muscle-level progress and training balance help move beyond weight-only tracking.</p></div>
-          <div class="muscle-map"><div class="body-head"></div><div class="body-torso"></div><div class="body-arm left"></div><div class="body-arm right"></div><div class="body-leg left"></div><div class="body-leg right"></div><span class="muscle m1"></span><span class="muscle m2"></span><span class="muscle m3"></span><span class="muscle m4"></span></div>
-        </article>
-
-        <article class="bento glass reveal">
-          <div class="feature-copy"><span class="feature-index">03 / BODY INTELLIGENCE · R&D</span><h3>Four-view capture.</h3><p>A guided front, left, back and right workflow is being developed for richer body-progress analysis.</p></div>
-          <div class="scan-frame"><div class="scan-person"></div><span class="scan-line"></span></div>
-          <div class="scan-steps"><span class="active">FRONT</span><span>LEFT</span><span>BACK</span><span>RIGHT</span></div>
-        </article>
-
-        <article class="bento bento-wide glass reveal delay-1">
-          <div class="feature-copy"><span class="feature-index">04 / RECOVERY</span><h3>Your workout does not end when you tap complete.</h3><p>Completing a workout marks the trained muscle groups and starts their recovery context for future recommendations.</p></div>
-          <div class="recovery-ui"><div class="recovery-ring"><div><strong>82%</strong><span>recovered</span></div></div><div class="recovery-copy"><small>CHEST</small><strong>31h remaining</strong><span>Last trained · today 18:42</span><div class="recovery-bar"><i></i></div></div></div>
-        </article>
-
-        <article class="bento bento-wide glass reveal">
-          <div class="feature-copy"><span class="feature-index">05 / NUTRITION</span><h3>Food that starts with real life.</h3><p>Aligna is designed to turn what the user already has into practical meal ideas, with dietary, allergen and sustainability filters on the roadmap.</p></div>
-          <div class="grocery-ui">
-            <div class="receipt glass-inset"><div class="receipt-head"><span>MY KITCHEN</span><b>4 READY</b></div><div class="item"><i>🥚</i><span>Eggs</span><em>✓</em></div><div class="item"><i>🥬</i><span>Spinach</span><em>✓</em></div><div class="item"><i>🍗</i><span>Chicken</span><em>✓</em></div><div class="item"><i>🍚</i><span>Rice</span><em>✓</em></div></div>
-            <div class="meal-suggestion"><small>✦ GENERATED FROM YOUR GROCERIES</small><strong>High-protein chicken rice bowl</strong><span>42g protein · 25 min</span><div class="diet-chips"><b>VEGETARIAN</b><b>ALLERGENS</b><b>SUSTAINABILITY</b></div></div>
-          </div>
-        </article>
-
-        <article class="bento glass reveal delay-1">
-          <div class="feature-copy"><span class="feature-index">06 / DARK MODE</span><h3>Designed for every hour.</h3><p>A premium dark interface now runs through the Aligna experience.</p></div>
-          <div class="darkmode-demo"><span>LIGHT</span><div class="toggle"><i></i></div><strong>DARK</strong></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="ai-layer" id="intelligence">
-      <div class="section-shell ai-grid">
-        <div class="reveal"><div class="section-label">03 / THE INTELLIGENCE LAYER</div><h2>Less like a chatbot.<br><span>More like a model of what changed.</span></h2><p>The long-term direction is an explainable intelligence layer that can reason across training, body progress, nutrition, recovery, habits, goals and wearable context while keeping the user in control.</p><div class="ai-pill-row"><span>Context-aware</span><span>Adaptive</span><span>Explainable</span><span>Privacy-conscious</span></div></div>
-        <div class="neural-card glass reveal delay-1">
-          <div class="neural-center">A</div><span class="node n1">TRAINING</span><span class="node n2">BODY</span><span class="node n3">FOOD</span><span class="node n4">GOALS</span><span class="node n5">RECOVERY</span><span class="node n6">WEARABLES</span>
-          <svg viewBox="0 0 500 500" aria-hidden="true"><g stroke="currentColor" fill="none" opacity=".42"><line x1="250" y1="250" x2="250" y2="60"/><line x1="250" y1="250" x2="420" y2="150"/><line x1="250" y1="250" x2="420" y2="355"/><line x1="250" y1="250" x2="250" y2="445"/><line x1="250" y1="250" x2="80" y2="355"/><line x1="250" y1="250" x2="80" y2="150"/></g></svg>
-          <div class="decision-callout"><small>WHY THIS CHANGED</small><strong>Push volume −8%</strong><span>Recent load ↑ · chest recovery incomplete</span></div>
+        <div class="mode-switch glass-shell" role="group" aria-label="Hero demo mode">
+          <button class="active" data-mode="recovery">Recovery</button>
+          <button data-mode="wearable">Wearable</button>
+          <button data-mode="ai">AI</button>
         </div>
       </div>
     </section>
 
-    <section class="signal section-shell" id="signal">
-      <div class="section-label reveal">04 / ALIGNA SIGNAL · WEARABLE R&D</div>
-      <div class="signal-head reveal"><h2>From tracking activity to<br><span>understanding signals.</span></h2><p>Galaxy Watch integration is the next step toward connecting real-world physiological and movement data to Aligna's adaptive model.</p></div>
-      <div class="device-flow glass reveal">
-        <div class="device watch-card"><span class="status active">PHASE 1 · TESTING</span><div class="mini-watch"><div><small>HEART RATE</small><strong><span class="heart">♥</span> <b id="signalBpm">78</b></strong><span>BPM</span></div></div><strong>Galaxy Watch5 / Wear OS</strong><small>SM-R900 target device</small></div>
-        <div class="flow-lines"><i></i><i></i><i></i><span>DATA LAYER</span></div>
-        <div class="device phone-card"><span class="status">ALIGN A / SENSOR STREAM</span><div class="telemetry"><div><small>HR</small><strong id="telemetryHr">78</strong><span>bpm</span></div><div><small>ACC X</small><strong id="accX">+0.21</strong><span>m/s²</span></div><div><small>ACC Y</small><strong id="accY">−0.07</strong><span>m/s²</span></div><div><small>ACC Z</small><strong id="accZ">+9.68</strong><span>m/s²</span></div></div><strong>Aligna phone companion</strong><small>Timestamped sensor batches · explicit start / stop</small></div>
-      </div>
-      <div class="phase-grid reveal">
-        <article class="glass"><span class="status active">01 · CURRENT</span><h3>Live sensing</h3><ul><li>Heart rate</li><li>Accelerometer X / Y / Z</li><li>Motion magnitude</li><li>Wear OS Data Layer</li><li>Explicit sensing start / stop</li><li>Galaxy Watch5 validation</li></ul></article>
-        <article class="glass"><span class="status next">02 · NEXT</span><h3>Longitudinal context</h3><ul><li>Exercise sessions</li><li>Background exercise service</li><li>Steps + calories</li><li>GPS routes</li><li>Sleep + resting heart rate</li><li>Health Connect</li></ul></article>
-        <article class="glass"><span class="status future">03 · ROADMAP</span><h3>Deeper physiology</h3><ul><li>HRV / RMSSD</li><li>IBI</li><li>PPG</li><li>SpO₂</li><li>Skin temperature where supported</li><li>Future Apple Watch pathway</li></ul></article>
+    <section class="marquee">
+      <div class="marquee-track">
+        <span>ADAPTIVE TRAINING</span><i>✦</i><span>BODY INTELLIGENCE</span><i>✦</i><span>RECOVERY</span><i>✦</i><span>WEARABLE SIGNALS</span><i>✦</i><span>NUTRITION</span><i>✦</i><span>PRIVATE AI</span><i>✦</i><span>ADAPTIVE TRAINING</span><i>✦</i><span>BODY INTELLIGENCE</span>
       </div>
     </section>
 
-    <section class="status-section section-shell" id="status">
-      <div class="section-label reveal">05 / BUILD STATUS</div>
-      <div class="status-grid reveal"><div><h2>What exists today.<br><span>What comes next.</span></h2><p>No inflated traction claims — just transparent product progress.</p></div><div class="build-list glass"><div><span>Android app</span><b class="done">LIVE BUILD</b></div><div><span>Adaptive workouts</span><b class="done">BUILT</b></div><div><span>Recovery workflow</span><b class="done">BUILT</b></div><div><span>Nutrition workflows</span><b class="done">BUILT</b></div><div><span>Aligna AI assistant</span><b class="done">BUILT</b></div><div><span>Dark mode</span><b class="done">BUILT</b></div><div><span>Wear OS companion</span><b class="testing">TESTING</b></div><div><span>Live HR + accelerometer</span><b class="testing">TESTING</b></div><div><span>Health Connect</span><b class="next">NEXT</b></div><div><span>Multiview body intelligence</span><b class="research">R&D</b></div></div></div>
-    </section>
-
-    <section class="roadmap section-shell" id="roadmap">
-      <div class="section-label reveal">06 / ROADMAP</div>
-      <div class="roadmap-head reveal"><h2>Phone → wearable →<br><span>longitudinal intelligence.</span></h2><p>Start with high-frequency fitness behaviour, then progressively enrich the personal model with multimodal and wearable context.</p></div>
-      <div class="roadmap-line reveal"><div class="road-stage current"><small>NOW</small><strong>Product validation</strong><p>Android experience, adaptive workouts, recovery, nutrition and wearable device testing.</p></div><div class="road-stage"><small>NEXT</small><strong>Connected context</strong><p>Health Connect, sessions, sleep, GPS, longitudinal progress and deeper personalisation.</p></div><div class="road-stage"><small>SCALE</small><strong>Adaptive ecosystem</strong><p>iOS / Apple Watch, partnerships, paid product and broader wellbeing intelligence.</p></div></div>
-    </section>
-
-    <section class="fundraise section-shell" id="fundraise">
-      <div class="section-label reveal">07 / FUNDRAISING</div>
-      <div class="fundraise-card glass reveal">
-        <div><span class="status active">EARLY STAGE</span><h2>We're building the intelligence layer between a person and their fitness data.</h2><p>Aligna is opening conversations with early-stage investors, accelerators, strategic sponsors, fitness organisations and research partners.</p></div>
-        <div class="fundraise-grid"><article class="glass-inset"><small>PRODUCT</small><strong>Working Android platform</strong><span>AI + progress + nutrition + recovery</span></article><article class="glass-inset"><small>MOAT DIRECTION</small><strong>Connected personal context</strong><span>Multimodal + wearable + longitudinal data</span></article><article class="glass-inset"><small>BUSINESS MODEL</small><strong>Consumer subscription</strong><span>Premium intelligence + partnership pathways</span></article><article class="glass-inset"><small>USE OF FUNDS</small><strong>Validation → scale</strong><span>Product, wearable integration, pilots, iOS and go-to-market</span></article></div>
+    <section class="intro shell">
+      <div class="section-tag reveal">01 / WHY ALIGNA</div>
+      <div class="intro-grid">
+        <h2 class="reveal">Fitness data is everywhere.<br><em>Understanding is not.</em></h2>
+        <div class="intro-copy reveal delay"><p>Most fitness tools separate training, food, progress and wearable data into different experiences. Aligna is designed to connect those signals and turn them into useful, personalised next actions.</p></div>
+      </div>
+      <div class="problem-cards">
+        <article class="liquid-card reveal"><span>01</span><h3>Generic plans</h3><p>Static programmes make the user adapt to the plan.</p><b>Aligna adapts the plan →</b></article>
+        <article class="liquid-card reveal delay"><span>02</span><h3>Disconnected signals</h3><p>Workout, food, body and wearable data rarely work together.</p><b>Aligna connects context →</b></article>
+        <article class="liquid-card reveal delay2"><span>03</span><h3>Tracking without action</h3><p>Numbers describe the past but do not always guide the next move.</p><b>Aligna turns data into decisions →</b></article>
       </div>
     </section>
 
-    <section class="founder section-shell" id="founder">
-      <div class="founder-card glass reveal"><div class="founder-monogram">SK</div><div class="founder-copy"><div class="section-label">08 / FOUNDER</div><h2>Built at the intersection of<br><span>AI, human behaviour and product.</span></h2><p>Aligna is being developed by <strong>Swetang Krishna</strong>, a PhD researcher at Trinity College Dublin working in conversational AI, large language models and human–AI interaction.</p><p class="founder-note">The current core team is one founder, with an additional member potentially joining as the venture develops.</p><div class="founder-links"><a href="mailto:swetang.krishna2000@gmail.com">Email founder ↗</a><a href="https://www.linkedin.com/in/swetang-krishna/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div></div>
+    <section class="product shell" id="product">
+      <div class="section-tag reveal">02 / PRODUCT</div>
+      <div class="section-head reveal">
+        <h2>A fitness experience that<br><em>changes with the user.</em></h2>
+        <p>The current Android build brings together adaptive training, progress, recovery, nutrition and AI assistance.</p>
+      </div>
+
+      <div class="bento">
+        <article class="liquid-card feature feature-xl reveal">
+          <div class="feature-copy"><span>ADAPTIVE TRAINING</span><h3>Planning that responds.</h3><p>Training can adapt around goals, equipment, recent workload, schedule and progress.</p></div>
+          <div class="plan-ui glass-inset">
+            <div class="plan-top"><b>THIS WEEK</b><span>AI ACTIVE</span></div>
+            <div class="plan-row active"><small>MON</small><strong>Push + Core</strong><em>44 min</em></div>
+            <div class="plan-row"><small>TUE</small><strong>Lower Body</strong><em>52 min</em></div>
+            <div class="plan-row"><small>WED</small><strong>Recovery</strong><em>20 min</em></div>
+            <div class="adjustment">✦ <span><b>Adjustment</b> Pressing volume reduced from recovery context.</span></div>
+          </div>
+        </article>
+
+        <article class="liquid-card feature reveal">
+          <div class="feature-copy"><span>PROGRESS</span><h3>See the training pattern.</h3><p>Muscle-level progress helps move beyond weight-only tracking.</p></div>
+          <div class="body-orbit">
+            <div class="body-core"><div class="head"></div><div class="torso"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div></div>
+            <i class="orbit o1"></i><i class="orbit o2"></i>
+            <span class="muscle-dot d1"></span><span class="muscle-dot d2"></span><span class="muscle-dot d3"></span>
+          </div>
+        </article>
+
+        <article class="liquid-card feature reveal">
+          <div class="feature-copy"><span>BODY INTELLIGENCE · R&D</span><h3>Four-view capture.</h3><p>Front, left, back and right capture is being developed for richer longitudinal body analysis.</p></div>
+          <div class="scan-panel glass-inset"><div class="scan-silhouette"></div><i class="scan-beam"></i><b>FRONT / 01</b></div>
+        </article>
+
+        <article class="liquid-card feature feature-xl reveal">
+          <div class="feature-copy"><span>RECOVERY</span><h3>The session ends. Recovery starts.</h3><p>Completing a workout marks trained muscle groups and creates recovery context for the next recommendation.</p></div>
+          <div class="recovery-demo">
+            <div class="recovery-ring"><div><strong>82%</strong><span>recovered</span></div></div>
+            <div><small>CHEST</small><strong>31h remaining</strong><span>Last trained today · 18:42</span><div class="recovery-track"><i></i></div></div>
+          </div>
+        </article>
+
+        <article class="liquid-card feature feature-xl reveal">
+          <div class="feature-copy"><span>NUTRITION</span><h3>Start with what is actually in the kitchen.</h3><p>Meal suggestions are designed around groceries, goals and preferences rather than generic meal plans.</p></div>
+          <div class="food-grid">
+            <div class="pantry glass-inset"><div><span>Eggs</span><b>✓</b></div><div><span>Spinach</span><b>✓</b></div><div><span>Chicken</span><b>✓</b></div><div><span>Rice</span><b>✓</b></div></div>
+            <div class="meal-card"><small>✦ GENERATED</small><strong>High-protein chicken rice bowl</strong><span>42g protein · 25 min</span><div><b>ALLERGENS</b><b>DIET</b><b>SUSTAINABILITY</b></div></div>
+          </div>
+        </article>
+
+        <article class="liquid-card feature reveal">
+          <div class="feature-copy"><span>DARK MODE</span><h3>Built for every hour.</h3><p>Aligna now includes a dedicated dark experience across the app.</p></div>
+          <div class="theme-toggle glass-inset"><span>LIGHT</span><div><i></i></div><b>DARK</b></div>
+        </article>
+      </div>
     </section>
 
-    <section class="contact section-shell" id="contact">
-      <div class="contact-card reveal"><div><div class="section-label light">PARTNERS / INVESTORS / SPONSORS</div><h2>Help shape what personal fitness AI becomes.</h2></div><div class="contact-right"><p>Interested in Aligna, the wearable roadmap, a pilot, sponsorship or investment?</p><a class="button button-light tactile" href="mailto:swetang.krishna2000@gmail.com?subject=Aligna%20—%20Partnership%20or%20Investment%20Enquiry">Start a conversation <span>↗</span></a></div></div>
+    <section class="signal-wrap" id="signal">
+      <div class="shell">
+        <div class="section-tag reveal">03 / ALIGNA SIGNAL</div>
+        <div class="section-head reveal"><h2>Wearables turn movement into<br><em>context.</em></h2><p>Galaxy Watch integration is the current development phase, connecting live sensor data with the phone experience.</p></div>
+
+        <div class="signal-console liquid-card reveal">
+          <div class="console-watch">
+            <span class="phase current">PHASE 1 · TESTING</span>
+            <div class="mini-watch"><small>HEART RATE</small><strong><i>♥</i><b id="signalBpm">78</b></strong><span>BPM</span></div>
+            <h3>Galaxy Watch5</h3><p>Wear OS · SM-R900</p>
+          </div>
+          <div class="console-stream"><div class="beam"><i></i><i></i><i></i><i></i></div><span>WEAR OS DATA LAYER</span></div>
+          <div class="console-phone">
+            <span class="phase">LIVE SENSOR STREAM</span>
+            <div class="telemetry">
+              <div><small>HR</small><strong id="telemetryHr">78</strong><span>bpm</span></div>
+              <div><small>ACC X</small><strong id="accX">+0.21</strong><span>m/s²</span></div>
+              <div><small>ACC Y</small><strong id="accY">−0.07</strong><span>m/s²</span></div>
+              <div><small>ACC Z</small><strong id="accZ">+9.68</strong><span>m/s²</span></div>
+            </div>
+            <h3>Aligna companion</h3><p>Timestamped batches · explicit start / stop</p>
+          </div>
+        </div>
+
+        <div class="phase-grid">
+          <article class="liquid-card reveal"><span class="phase current">01 · CURRENT</span><h3>Live sensing</h3><ul><li>Heart rate</li><li>Accelerometer X/Y/Z</li><li>Motion magnitude</li><li>Wear OS Data Layer</li><li>Galaxy Watch5 validation</li></ul></article>
+          <article class="liquid-card reveal delay"><span class="phase next">02 · NEXT</span><h3>Longitudinal context</h3><ul><li>Exercise sessions</li><li>Steps + calories</li><li>GPS routes</li><li>Sleep + resting HR</li><li>Health Connect</li></ul></article>
+          <article class="liquid-card reveal delay2"><span class="phase roadmap">03 · ROADMAP</span><h3>Deeper physiology</h3><ul><li>HRV / RMSSD</li><li>IBI + PPG</li><li>SpO₂</li><li>Skin temperature where supported</li><li>Apple Watch pathway</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="intelligence shell" id="vision">
+      <div class="section-tag reveal">04 / INTELLIGENCE LAYER</div>
+      <div class="intelligence-grid">
+        <div class="reveal"><h2>Less like a chatbot.<br><em>More like a model of what changed.</em></h2><p>Aligna's direction is an explainable intelligence layer that reasons across training, recovery, body progress, nutrition, goals and wearable context.</p><div class="pill-row"><span>Context-aware</span><span>Adaptive</span><span>Explainable</span><span>Privacy-conscious</span></div></div>
+        <div class="ai-orbit liquid-card reveal delay">
+          <div class="ai-core">A</div>
+          <span class="node n1">TRAINING</span><span class="node n2">BODY</span><span class="node n3">FOOD</span><span class="node n4">RECOVERY</span><span class="node n5">GOALS</span><span class="node n6">WEARABLES</span>
+          <i class="orbit-line ol1"></i><i class="orbit-line ol2"></i><i class="orbit-line ol3"></i>
+          <div class="decision glass-inset"><small>WHY THIS CHANGED</small><strong>Push volume −8%</strong><span>Recent load ↑ · recovery incomplete</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="build shell" id="build">
+      <div class="section-tag reveal">05 / BUILD STATUS</div>
+      <div class="build-grid">
+        <div class="reveal"><h2>Working product.<br><em>Transparent roadmap.</em></h2><p>Rather than inflated traction claims, the site shows exactly what is built, being tested and planned.</p></div>
+        <div class="build-list liquid-card reveal delay">
+          <div><span>Android app</span><b class="built">LIVE BUILD</b></div>
+          <div><span>Adaptive workouts</span><b class="built">BUILT</b></div>
+          <div><span>Recovery workflow</span><b class="built">BUILT</b></div>
+          <div><span>Nutrition workflows</span><b class="built">BUILT</b></div>
+          <div><span>Aligna AI assistant</span><b class="built">BUILT</b></div>
+          <div><span>Dark mode</span><b class="built">BUILT</b></div>
+          <div><span>Wear OS companion</span><b class="testing">TESTING</b></div>
+          <div><span>Live HR + accelerometer</span><b class="testing">TESTING</b></div>
+          <div><span>Health Connect</span><b class="next">NEXT</b></div>
+          <div><span>Multiview body intelligence</span><b class="rd">R&D</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fundraise shell">
+      <div class="fundraise-card liquid-card reveal">
+        <div><span class="phase current">EARLY STAGE</span><h2>Building the intelligence layer between a person and their fitness data.</h2><p>We are opening conversations with investors, accelerators, strategic sponsors, research partners and fitness organisations.</p></div>
+        <div class="fund-grid">
+          <article class="glass-inset"><small>PRODUCT</small><strong>Working Android platform</strong><span>AI + recovery + nutrition + progress</span></article>
+          <article class="glass-inset"><small>DATA DIRECTION</small><strong>Connected personal context</strong><span>Multimodal + wearable + longitudinal</span></article>
+          <article class="glass-inset"><small>MODEL</small><strong>Consumer subscription</strong><span>Premium intelligence + partnerships</span></article>
+          <article class="glass-inset"><small>USE OF FUNDS</small><strong>Validation → scale</strong><span>Product, pilots, iOS, wearables, go-to-market</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="founder shell">
+      <div class="founder-card liquid-card reveal">
+        <div class="founder-mark">SK</div>
+        <div><div class="section-tag">06 / FOUNDER</div><h2>AI research meets<br><em>consumer product.</em></h2><p>Aligna is being developed by <strong>Swetang Krishna</strong>, a PhD researcher at Trinity College Dublin working in conversational AI, large language models and human–AI interaction.</p><p>The venture is currently founder-led, with an additional team member potentially joining as it develops.</p><div class="founder-links"><a href="mailto:swetang.krishna2000@gmail.com">Email ↗</a><a href="https://www.linkedin.com/in/swetang-krishna/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
+      </div>
+    </section>
+
+    <section class="contact shell" id="contact">
+      <div class="contact-card">
+        <div><span>INVESTORS · PARTNERS · SPONSORS</span><h2>Help shape what personal fitness AI becomes.</h2></div>
+        <div><p>Interested in the product, wearable roadmap, a pilot, sponsorship or investment?</p><a class="btn btn-dark magnetic" href="mailto:swetang.krishna2000@gmail.com?subject=Aligna%20—%20Partnership%20or%20Investment">Start a conversation ↗</a></div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer section-shell"><a class="brand" href="#top"><span class="brand-mark">A</span><span>aligna</span></a><p>Personal fitness intelligence.</p><span>© <span id="year"></span> Aligna</span></footer>
+  <footer class="shell footer"><a class="brand" href="#top"><span class="logo">A</span><span>aligna</span></a><p>Personal fitness intelligence.</p><span>© <span id="year"></span> Aligna</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
