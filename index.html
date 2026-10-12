@@ -130,7 +130,51 @@
         <article class="liquid-card feature reveal">
           <div class="feature-copy"><span>PROGRESS</span><h3>See the training pattern.</h3><p>Muscle-level progress helps move beyond weight-only tracking.</p></div>
           <div class="body-orbit">
-            <div class="body-core"><div class="head"></div><div class="torso"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div></div>
+            <svg class="anatomy-figure progress-anatomy" viewBox="0 0 220 360" role="img" aria-label="Cyberpunk anatomical human figure showing major muscle groups">
+  <defs>
+    <linearGradient id="bodyGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a6b7d7" stop-opacity=".62"/>
+      <stop offset=".48" stop-color="#526078" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#1d2533" stop-opacity=".58"/>
+    </linearGradient>
+    <linearGradient id="muscleGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#62f6ff"/>
+      <stop offset=".55" stop-color="#5577ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g class="anatomy-body">
+    <ellipse cx="110" cy="31" rx="25" ry="29" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.35)" stroke-width="1.3"/>
+    <path d="M93 55 Q110 64 127 55 L134 69 Q148 72 158 82 L174 128 L164 132 L150 101 L143 158 Q139 194 136 214 L132 344 L111 344 L110 230 L109 344 L88 344 L84 214 Q81 191 77 158 L70 101 L56 132 L46 128 L62 82 Q72 72 86 69 Z" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.32)" stroke-width="1.4"/>
+    <path d="M62 82 Q48 96 43 126 L31 202 Q30 219 42 222 Q54 220 57 205 L70 135" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.28)" stroke-width="1.4"/>
+    <path d="M158 82 Q172 96 177 126 L189 202 Q190 219 178 222 Q166 220 163 205 L150 135" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.28)" stroke-width="1.4"/>
+  </g>
+  <g class="muscle-lines" fill="none" stroke="#8fb7ff" stroke-opacity=".43" stroke-width="1.1">
+    <path d="M89 75 Q110 67 131 75 M87 83 Q98 101 109 99 M133 83 Q122 101 111 99"/>
+    <path d="M88 106 Q110 118 132 106 M91 127 Q110 137 129 127 M94 149 Q110 156 126 149"/>
+    <path d="M110 100 L110 190 M89 99 Q78 117 80 147 M131 99 Q142 117 140 147"/>
+    <path d="M86 168 Q110 183 134 168 M82 190 Q99 203 109 214 M138 190 Q121 203 111 214"/>
+    <path d="M91 221 Q102 237 108 251 M129 221 Q118 237 112 251 M90 270 Q103 281 108 300 M130 270 Q117 281 112 300"/>
+    <path d="M52 131 Q48 153 44 178 M168 131 Q172 153 176 178"/>
+  </g>
+  <g class="muscle-zones" filter="url(#softGlow)" opacity=".88">
+    <path d="M88 79 Q109 70 108 99 Q91 99 83 91 Z" fill="#62f6ff" fill-opacity=".42"/>
+    <path d="M132 79 Q111 70 112 99 Q129 99 137 91 Z" fill="#62f6ff" fill-opacity=".42"/>
+    <path d="M93 107 Q109 103 108 129 Q97 129 91 121 Z" fill="#5577ff" fill-opacity=".36"/>
+    <path d="M127 107 Q111 103 112 129 Q123 129 129 121 Z" fill="#5577ff" fill-opacity=".36"/>
+    <path d="M93 132 Q109 128 108 154 Q97 154 92 146 Z" fill="#8b5cf6" fill-opacity=".32"/>
+    <path d="M127 132 Q111 128 112 154 Q123 154 128 146 Z" fill="#8b5cf6" fill-opacity=".32"/>
+    <path d="M53 115 Q65 111 68 139 Q59 144 50 137 Z" fill="#5577ff" fill-opacity=".34"/>
+    <path d="M167 115 Q155 111 152 139 Q161 144 170 137 Z" fill="#5577ff" fill-opacity=".34"/>
+    <path d="M88 221 Q107 220 108 264 Q96 264 88 251 Z" fill="#ff4fd8" fill-opacity=".28"/>
+    <path d="M132 221 Q113 220 112 264 Q124 264 132 251 Z" fill="#ff4fd8" fill-opacity=".28"/>
+  </g>
+  <g class="cyber-joints" fill="#62f6ff" filter="url(#softGlow)">
+    <circle cx="110" cy="61" r="2.2"/><circle cx="80" cy="87" r="2.1"/><circle cx="140" cy="87" r="2.1"/>
+    <circle cx="55" cy="137" r="2.1"/><circle cx="165" cy="137" r="2.1"/><circle cx="92" cy="216" r="2.1"/><circle cx="128" cy="216" r="2.1"/>
+  </g>
+</svg>
             <i class="orbit o1"></i><i class="orbit o2"></i>
             <span class="muscle-dot d1"></span><span class="muscle-dot d2"></span><span class="muscle-dot d3"></span>
           </div>
@@ -138,7 +182,51 @@
 
         <article class="liquid-card feature reveal">
           <div class="feature-copy"><span>BODY INTELLIGENCE · R&D</span><h3>Four-view capture.</h3><p>Front, left, back and right capture is being developed for richer longitudinal body analysis.</p></div>
-          <div class="scan-panel glass-inset"><div class="scan-silhouette"></div><i class="scan-beam"></i><b>FRONT / 01</b></div>
+          <div class="scan-panel glass-inset"><svg class="anatomy-figure scan-anatomy" viewBox="0 0 220 360" role="img" aria-label="Cyberpunk anatomical human figure showing major muscle groups">
+  <defs>
+    <linearGradient id="scanBodyGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a6b7d7" stop-opacity=".62"/>
+      <stop offset=".48" stop-color="#526078" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#1d2533" stop-opacity=".58"/>
+    </linearGradient>
+    <linearGradient id="scanMuscleGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#62f6ff"/>
+      <stop offset=".55" stop-color="#5577ff"/>
+      <stop offset="1" stop-color="#ff4fd8"/>
+    </linearGradient>
+    <filter id="scanSoftGlow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g class="anatomy-body">
+    <ellipse cx="110" cy="31" rx="25" ry="29" fill="url(#scanBodyGlass)" stroke="rgba(190,220,255,.35)" stroke-width="1.3"/>
+    <path d="M93 55 Q110 64 127 55 L134 69 Q148 72 158 82 L174 128 L164 132 L150 101 L143 158 Q139 194 136 214 L132 344 L111 344 L110 230 L109 344 L88 344 L84 214 Q81 191 77 158 L70 101 L56 132 L46 128 L62 82 Q72 72 86 69 Z" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.32)" stroke-width="1.4"/>
+    <path d="M62 82 Q48 96 43 126 L31 202 Q30 219 42 222 Q54 220 57 205 L70 135" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.28)" stroke-width="1.4"/>
+    <path d="M158 82 Q172 96 177 126 L189 202 Q190 219 178 222 Q166 220 163 205 L150 135" fill="url(#bodyGlass)" stroke="rgba(190,220,255,.28)" stroke-width="1.4"/>
+  </g>
+  <g class="muscle-lines" fill="none" stroke="#8fb7ff" stroke-opacity=".43" stroke-width="1.1">
+    <path d="M89 75 Q110 67 131 75 M87 83 Q98 101 109 99 M133 83 Q122 101 111 99"/>
+    <path d="M88 106 Q110 118 132 106 M91 127 Q110 137 129 127 M94 149 Q110 156 126 149"/>
+    <path d="M110 100 L110 190 M89 99 Q78 117 80 147 M131 99 Q142 117 140 147"/>
+    <path d="M86 168 Q110 183 134 168 M82 190 Q99 203 109 214 M138 190 Q121 203 111 214"/>
+    <path d="M91 221 Q102 237 108 251 M129 221 Q118 237 112 251 M90 270 Q103 281 108 300 M130 270 Q117 281 112 300"/>
+    <path d="M52 131 Q48 153 44 178 M168 131 Q172 153 176 178"/>
+  </g>
+  <g class="muscle-zones" filter="url(#scanSoftGlow)" opacity=".88">
+    <path d="M88 79 Q109 70 108 99 Q91 99 83 91 Z" fill="#62f6ff" fill-opacity=".42"/>
+    <path d="M132 79 Q111 70 112 99 Q129 99 137 91 Z" fill="#62f6ff" fill-opacity=".42"/>
+    <path d="M93 107 Q109 103 108 129 Q97 129 91 121 Z" fill="#5577ff" fill-opacity=".36"/>
+    <path d="M127 107 Q111 103 112 129 Q123 129 129 121 Z" fill="#5577ff" fill-opacity=".36"/>
+    <path d="M93 132 Q109 128 108 154 Q97 154 92 146 Z" fill="#8b5cf6" fill-opacity=".32"/>
+    <path d="M127 132 Q111 128 112 154 Q123 154 128 146 Z" fill="#8b5cf6" fill-opacity=".32"/>
+    <path d="M53 115 Q65 111 68 139 Q59 144 50 137 Z" fill="#5577ff" fill-opacity=".34"/>
+    <path d="M167 115 Q155 111 152 139 Q161 144 170 137 Z" fill="#5577ff" fill-opacity=".34"/>
+    <path d="M88 221 Q107 220 108 264 Q96 264 88 251 Z" fill="#ff4fd8" fill-opacity=".28"/>
+    <path d="M132 221 Q113 220 112 264 Q124 264 132 251 Z" fill="#ff4fd8" fill-opacity=".28"/>
+  </g>
+  <g class="cyber-joints" fill="#62f6ff" filter="url(#scanSoftGlow)">
+    <circle cx="110" cy="61" r="2.2"/><circle cx="80" cy="87" r="2.1"/><circle cx="140" cy="87" r="2.1"/>
+    <circle cx="55" cy="137" r="2.1"/><circle cx="165" cy="137" r="2.1"/><circle cx="92" cy="216" r="2.1"/><circle cx="128" cy="216" r="2.1"/>
+  </g>
+</svg><i class="scan-beam"></i><b>FRONT / 01</b><span class="scan-grid" aria-hidden="true"></span></div>
         </article>
 
         <article class="liquid-card feature feature-xl reveal">
