@@ -206,3 +206,24 @@ radial-gradient(circle,rgba(45,108,255,.18),rgba(139,92,246,.08) 42%,transparent
   .feature{min-height:430px;padding:22px}.food-grid{grid-template-columns:1fr}.meal-card{display:none}.recovery-demo{grid-template-columns:1fr}
   .fund-grid{grid-template-columns:1fr}.founder-card>div:last-child{padding:30px}.contact-card{padding:30px}.contact-card h2{font-size:44px}.footer{padding:32px 0;gap:16px;flex-wrap:wrap}.footer p{order:3;width:100%}
 }
+
+/* Anatomy-only component refinement — no other site styling changed */
+.body-orbit{position:relative;margin:auto;width:250px;height:275px;display:grid;place-items:center}
+.anatomy-figure{position:relative;z-index:2;width:180px;height:auto;overflow:visible;filter:drop-shadow(0 0 14px rgba(98,246,255,.08))}
+.progress-anatomy{transform:translateY(2px)}
+.anatomy-figure .anatomy-body{opacity:.96}
+.anatomy-figure .muscle-lines{mix-blend-mode:screen}
+.anatomy-figure .muscle-zones{mix-blend-mode:screen}
+.anatomy-figure .cyber-joints{animation:anatomyPulse 2.4s ease-in-out infinite}
+.body-orbit .orbit{z-index:1}
+.body-orbit .muscle-dot{z-index:3}
+.scan-panel{height:230px;margin-top:auto;position:relative;overflow:hidden;display:grid;place-items:center}
+.scan-anatomy{width:122px;height:auto;z-index:2;opacity:.9;filter:drop-shadow(0 0 16px rgba(98,246,255,.16))}
+.scan-anatomy .anatomy-body{opacity:.78}
+.scan-anatomy .muscle-lines{stroke-opacity:.58}
+.scan-anatomy .muscle-zones{opacity:.48}
+.scan-panel:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(98,246,255,.035),transparent);pointer-events:none}
+.scan-grid{position:absolute;inset:0;z-index:1;background-image:linear-gradient(rgba(98,246,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(98,246,255,.04) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(to bottom,transparent,black 18%,black 85%,transparent)}
+.scan-beam{z-index:4}
+.scan-panel b{z-index:5}
+@keyframes anatomyPulse{50%{opacity:.55;filter:drop-shadow(0 0 8px rgba(98,246,255,.8))}}
